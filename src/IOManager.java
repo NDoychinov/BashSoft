@@ -1,0 +1,85 @@
+import java.io.File;
+import java.nio.file.FileSystemException;
+import java.util.LinkedList;
+
+/**
+ * Created by Niki on 17.5.2016 г..
+ */
+public class IOManager {
+
+    public static void createDirectoryInCurrentFolder(String name) {
+        String path = getCurrentDirectoryPath() + "\\" + name;
+        File file = new File(path);
+        file.mkdir();
+    }
+
+    public static String getCurrentDirectoryPath() {
+        String currentPath = SessionData.currentPath;
+        return currentPath;
+    }
+
+    public static void traverseDirectory(int depth) {
+        LinkedList<File> subFolders = new LinkedList<>();
+        String path = SessionData.currentPath;
+        int initialIdentation = path.split("\\\\").length;
+
+        File root = new File(path);
+        subFolders.add(root);
+
+        while (subFolders.size() != 0) {
+            File currentFolder = subFolders.removeFirst();
+            int currentIdentation = currentFolder.toString().split("\\\\").length - initialIdentation;
+
+            if (depth - currentIdentation < 0) {
+                break;
+            }
+
+            OutputWriter.writeMessageOnNewLine(currentFolder.toString());
+
+            if (currentFolder.listFiles() != null) {
+                for (File file : currentFolder.listFiles()) {
+                    if (file.isDirectory()) {
+                        subFolders.add(file);
+                    } else {
+                        int indexOfLastSlash = file.toString().lastIndexOf("\\");
+                        for (int i = 0; i < indexOfLastSlash; i++) {
+                            OutputWriter.writeMessage("-");
+                        }
+                        OutputWriter.writeMessageOnNewLine(file.getName());
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    public static void changeCurrentDirRelativePath(String relativePath) {
+        if (relativePath.equals("..")) {
+            try {
+                String currentPath = SessionData.currentPath;
+                int indexOfLastSlash = currentPath.lastIndexOf("\\");
+                String newPath = currentPath.substring(0, indexOfLastSlash);
+                SessionData.currentPath = newPath;
+            }catch (StringIndexOutOfBoundsException e){
+                OutputWriter.displayException(ExceptionMessages.INVALID_DESTINATION);
+            }
+        } else {
+            String currentPath = SessionData.currentPath;
+            currentPath += "\\" + relativePath;
+            changeCurrentDirRelativePath(currentPath);
+        }
+    }
+
+    public static void changeCurrentDirAbsolute(String absolutePath) {
+        File file = new File(absolutePath);
+
+        if (!file.exists()){
+            OutputWriter.displayException(ExceptionMessages.INVALID_PATH);
+            return;
+        }
+
+        SessionData.currentPath = absolutePath;
+    }
+
+}
