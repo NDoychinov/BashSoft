@@ -18,23 +18,23 @@ public class CommandInterpreter {
                 tryCreateDirectory(input, data);
                 break;
             case "ls":
-
+                tryTraverseFolders(input, data);
                 break;
 
             case "cmp":
-
+                tryCompareFiles(input, data);
                 break;
 
             case "changeDirRel":
-
+                tryChangeRelativePath(input, data);
                 break;
 
             case "changeDirAbs":
-
+                tryChangeAbsolutePath(input, data);
                 break;
 
             case "readDb":
-
+                tryReadDatabaseFromFile(input, data);
                 break;
 
             case "filter":
@@ -87,19 +87,59 @@ public class CommandInterpreter {
         }
     }
 
-    private static void tryTraverseFolders(String input, String[] data){
-        if (data.length != 1 && data.length != 2){
+    private static void tryTraverseFolders(String input, String[] data) {
+        if (data.length != 1 && data.length != 2) {
             displayInvalidCommandMessage(input);
             return;
         }
-        if (data.length == 1){
+        if (data.length == 1) {
             IOManager.traverseDirectory(0);
         }
 
-        if (data.length == 2){
+        if (data.length == 2) {
             IOManager.traverseDirectory(Integer.parseInt(data[1]));
         }
     }
 
+    public static void tryCompareFiles(String input, String[] data) {
+        if (data.length != 3) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String firstPath = data[1];
+        String secondPath = data[2];
+        Tester.compareContent(firstPath, secondPath);
+    }
+
+    public static void tryChangeRelativePath(String input, String[] data) {
+        if (data.length != 2) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String relativePath = data[1];
+        IOManager.changeCurrentDirRelativePath(relativePath);
+    }
+
+    public static void tryChangeAbsolutePath(String input, String[] data) {
+        if (data.length != 2) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String absolutePath = data[1];
+        IOManager.changeCurrentDirAbsolute(absolutePath);
+    }
+
+    public static void tryReadDatabaseFromFile(String input, String[] data){
+        if (data.length != 2){
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String fileName = data[1];
+        StudentsRepository.initializeData(fileName);
+    }
 
 }

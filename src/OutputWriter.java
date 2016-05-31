@@ -20,7 +20,7 @@ public class OutputWriter {
         System.out.println(message);
     }
 
-    public static void printStudent(String name, List<Integer> marks){
+    public static void printStudent(String name, List<Integer> marks) {
         String output = String.format("%s - %s", name, marks.toString());
         OutputWriter.writeMessageOnNewLine(output);
     }

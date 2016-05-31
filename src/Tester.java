@@ -6,18 +6,18 @@ import java.util.List;
  * Created by Niki on 25.5.2016 г..
  */
 public class Tester {
-    public static void CompareContent(String actualOutput, String expectedOutput) {
+    public static void compareContent(String actualOutput, String expectedOutput) {
         try {
             OutputWriter.writeMessageOnNewLine("Reading files...");
-            String mismatchPath = GetMismatchPath(expectedOutput);
+            String mismatchPath = getMismatchPath(expectedOutput);
 
-            List<String> actualOutputString = ReadTextFile(actualOutput);
-            List<String> expectedOutputString = ReadTextFile(expectedOutput);
+            List<String> actualOutputString = readTextFile(actualOutput);
+            List<String> expectedOutputString = readTextFile(expectedOutput);
 
-            boolean mismatch = CompareStrings(actualOutputString, expectedOutputString, mismatchPath);
+            boolean mismatch = compareStrings(actualOutputString, expectedOutputString, mismatchPath);
 
             if (mismatch) {
-                List<String> mismatchString = ReadTextFile(mismatchPath);
+                List<String> mismatchString = readTextFile(mismatchPath);
                 mismatchString.forEach(OutputWriter::writeMessageOnNewLine);
             } else {
                 OutputWriter.writeMessageOnNewLine("Files are identical. There are no mismatches.");
@@ -27,13 +27,13 @@ public class Tester {
         }
     }
 
-    public static String GetMismatchPath(String expectedOutput) {
+    public static String getMismatchPath(String expectedOutput) {
         int index = expectedOutput.lastIndexOf('\\');
         String directoryPath = expectedOutput.substring(0, index);
         return directoryPath + "\\mismatch.txt";
     }
 
-    private static List<String> ReadTextFile(String filePath) throws IOException {
+    private static List<String> readTextFile(String filePath) throws IOException {
         List<String> text = new ArrayList<>();
 
         File file = new File(filePath);
@@ -55,7 +55,7 @@ public class Tester {
         return text;
     }
 
-    private static boolean CompareStrings(
+    private static boolean compareStrings(
             List<String> actualOutputString,
             List<String> expectedOutputString,
             String mismatchPath) {

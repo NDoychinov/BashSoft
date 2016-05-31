@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 /**
@@ -7,7 +11,7 @@ public class StudentsRepository {
     public static boolean isDataInitilized = false;
     public static HashMap<String, HashMap<String, ArrayList<Integer>>> studentsByCourse;
 
-    public static void InitializeData() {
+    public static void initializeData() {
         if (isDataInitilized) {
             System.out.println(ExceptionMessages.DATA_ALREADY_INITIALIZED);
         }
@@ -42,7 +46,7 @@ public class StudentsRepository {
         OutputWriter.writeMessageOnNewLine("Data read.");
     }
 
-    private static boolean IsQueryForCoursePossible(String courseName) {
+    private static boolean isQueryForCoursePossible(String courseName) {
         if (!isDataInitilized) {
             OutputWriter.displayException(ExceptionMessages.DATA_NOT_INITIALIZED);
             return false;
@@ -55,8 +59,8 @@ public class StudentsRepository {
         return true;
     }
 
-    private static boolean IsQueryForStudentPossiblе(String courseName, String studentName) {
-        if (!IsQueryForCoursePossible(courseName)) {
+    private static boolean isQueryForStudentPossiblе(String courseName, String studentName) {
+        if (!isQueryForCoursePossible(courseName)) {
             return false;
         }
 
@@ -68,8 +72,8 @@ public class StudentsRepository {
         return true;
     }
 
-    public static void GetStudentMarksInCourse(String course, String student) {
-        if (!IsQueryForStudentPossiblе(course, student)) {
+    public static void getStudentMarksInCourse(String course, String student) {
+        if (!isQueryForStudentPossiblе(course, student)) {
             return;
         }
 
@@ -77,16 +81,30 @@ public class StudentsRepository {
         OutputWriter.printStudent(student, marks);
     }
 
-    public static void GetStudentsByCourse(String course) {
-        if (!IsQueryForCoursePossible(course)) {
+    public static void getStudentsByCourse(String course) {
+        if (!isQueryForCoursePossible(course)) {
             return;
         }
 
         OutputWriter.writeMessageOnNewLine(course + ":");
 
-        for (Map.Entry<String,ArrayList<Integer>> student : studentsByCourse.get(course).entrySet()) {
+        for (Map.Entry<String, ArrayList<Integer>> student : studentsByCourse.get(course).entrySet()) {
             OutputWriter.printStudent(student.getKey(), student.getValue());
         }
     }
+
+    public static void initializeData(String fileName) {
+    }
+
+    public static void readData(String fileName) throws IOException {
+        String path = SessionData.currentPath + "\\" + fileName;
+        List<String> lines = Files.readAllLines(Paths.get(path));
+
+        for (String line : lines) {
+            String[] tokens = line.split("\\s+");
+
+        }
+    }
+
 
 }
