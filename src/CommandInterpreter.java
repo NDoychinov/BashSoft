@@ -56,6 +56,11 @@ public class CommandInterpreter {
             case "help":
                 getHelp();
                 break;
+
+            case "show":
+                tryShowWantedCourse(input, data);
+                break;
+
             default:
                 displayInvalidCommandMessage(input);
                 break;
@@ -132,7 +137,7 @@ public class CommandInterpreter {
         IOManager.changeCurrentDirAbsolute(absolutePath);
     }
 
-    public static void tryReadDatabaseFromFile(String input, String[] data){
+    public static void tryReadDatabaseFromFile(String input, String[] data) throws IOException {
         if (data.length != 2){
             displayInvalidCommandMessage(input);
             return;
@@ -175,5 +180,22 @@ public class CommandInterpreter {
     }
 
     public static void tryDownloadAsynch(String input, String[] data){
+    }
+
+    public static void tryShowWantedCourse(String input, String[] data){
+        if (data.length != 2 && data.length != 3){
+            displayInvalidCommandMessage(input);
+        }
+
+        if (data.length == 2){
+            String courseName = data[1];
+            StudentsRepository.getStudentsByCourse(courseName);
+        }
+
+        if (data.length == 3){
+            String courseName= data[1];
+            String userName= data[2];
+            StudentsRepository.getStudentMarksInCourse(courseName, userName);
+        }
     }
 }
