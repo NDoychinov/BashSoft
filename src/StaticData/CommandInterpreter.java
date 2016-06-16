@@ -1,3 +1,13 @@
+package StaticData;
+
+import IO.IOManager;
+import IO.OutputWriter;
+import Judge.Tester;
+import Repository.StudentsRepository;
+import DownloadManager.DowloadManager;
+import Repository.RepositorySorters;
+import com.sun.corba.se.spi.activation.Repository;
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -38,19 +48,23 @@ public class CommandInterpreter {
                 break;
 
             case "filter":
-                tryFilter(input, data);
+                tryPrintFilteredStudents(input, data);
                 break;
 
             case "order":
-                tryOrder(input, data);
+                tryPrintOrderedStudents(input, data);
+                break;
+
+            case "sort":
+                tryPrintSortedStudents(input, data);
                 break;
 
             case "download":
-                tryDownload(input, data);
+                tryDownloadFile(input, data);
                 break;
 
             case "downloadAsynch":
-                tryDownloadAsynch(input, data);
+                tryDownloadFileOnNewThread(input, data);
                 break;
 
             case "help":
@@ -138,7 +152,7 @@ public class CommandInterpreter {
     }
 
     public static void tryReadDatabaseFromFile(String input, String[] data) throws IOException {
-        if (data.length != 2){
+        if (data.length != 2) {
             displayInvalidCommandMessage(input);
             return;
         }
@@ -147,7 +161,7 @@ public class CommandInterpreter {
         StudentsRepository.initializeData(fileName);
     }
 
-    public static void getHelp(){
+    public static void getHelp() {
         OutputWriter.writeMessageOnNewLine("mkdir path - make directory");
         OutputWriter.writeMessageOnNewLine("ls depth - traverse directory");
         OutputWriter.writeMessageOnNewLine("cmp path1 path2 - compare two files");
@@ -170,32 +184,88 @@ public class CommandInterpreter {
         OutputWriter.writeEmptyLine();
     }
 
-    public static void tryFilter(String input, String[] data){
+    public static void tryDownloadFile(String input, String[] data) {
+        if (data.length != 2) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String fileUrl = data[1];
+        DowloadManager.download(fileUrl);
     }
 
-    public static void tryOrder(String input, String[] data){
+    public static void tryDownloadFileOnNewThread(String input, String[] data) {
+        if (data.length != 2) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String fileUrl = data[1];
+        DowloadManager.downloadOnNewThread(fileUrl);
     }
 
-    public static void tryDownload(String input, String[] data){
-    }
-
-    public static void tryDownloadAsynch(String input, String[] data){
-    }
-
-    public static void tryShowWantedCourse(String input, String[] data){
-        if (data.length != 2 && data.length != 3){
+    public static void tryShowWantedCourse(String input, String[] data) {
+        if (data.length != 2 && data.length != 3) {
             displayInvalidCommandMessage(input);
         }
 
-        if (data.length == 2){
+        if (data.length == 2) {
             String courseName = data[1];
             StudentsRepository.getStudentsByCourse(courseName);
         }
 
-        if (data.length == 3){
-            String courseName= data[1];
-            String userName= data[2];
+        if (data.length == 3) {
+            String courseName = data[1];
+            String userName = data[2];
             StudentsRepository.getStudentMarksInCourse(courseName, userName);
         }
+    }
+
+    public static void tryPrintFilteredStudents(String input, String[] data) {
+        if (data.length != 3 && data.length != 4) {
+            displayInvalidCommandMessage(input);
+        }
+
+        String course = data[1];
+        String filter = data[2];
+
+        if (data.length == 3) {
+            StudentsRepository.printFilteredStudents(course, filter, null);
+            return;
+        }
+
+        Integer numberOfStudents = Integer.valueOf(data[3]);
+
+        if (data.length == 4) {
+            StudentsRepository.printFilteredStudents(course, filter, numberOfStudents);
+        }
+    }
+
+    public static void tryPrintOrderedStudents(String input, String[] data) {
+        if (data.length != 3 && data.length != 4) {
+            displayInvalidCommandMessage(input);
+        }
+
+        String course = data[1];
+        String filter = data[2];
+
+        if (data.length == 3) {
+            StudentsRepository.printOrderedStudents(course, filter, null);
+            return;
+        }
+
+        Integer numberOfStudents = Integer.valueOf(data[3]);
+
+        if (data.length == 4) {
+            StudentsRepository.printOrderedStudents(course, filter, numberOfStudents);
+        }
+    }
+
+    public static void tryPrintSortedStudents(String input, String[] data){
+        if (data.length != 3 && data.length != 4) {
+            displayInvalidCommandMessage(input);
+        }
+
+        //TO DO
     }
 }

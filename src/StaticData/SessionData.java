@@ -1,3 +1,5 @@
+package StaticData;
+
 import java.io.File;
 import java.util.LinkedList;
 
@@ -6,5 +8,4 @@ import java.util.LinkedList;
  */
 public class SessionData {
     public static String currentPath = System.getProperty("user.dir");
-
 }

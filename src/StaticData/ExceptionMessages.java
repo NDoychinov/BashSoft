@@ -1,3 +1,5 @@
+package StaticData;
+
 /**
  * Created by Niki on 20.5.2016 г..
  */
@@ -11,4 +13,5 @@ public class ExceptionMessages {
     public static final String CANNOT_ACCESS_FILE = "Cannot access file";
     public static final String INVALID_OUTPUT_LENGTH = "Invalid output length";
     public static final String INVALID_DESTINATION = "Invalid destination";
+    public static final String INVALID_FILTER  = "Invalid filter";
 }

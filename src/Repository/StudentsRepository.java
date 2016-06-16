@@ -1,7 +1,11 @@
+package Repository;
+
+import IO.OutputWriter;
+import StaticData.ExceptionMessages;
+import StaticData.SessionData;
+
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -101,8 +105,32 @@ public class StudentsRepository {
             }
             isDataInitilized = true;
             OutputWriter.writeMessageOnNewLine("Data read.");
-        }catch (IOException e){
+        } catch (IOException e) {
             OutputWriter.displayException(ExceptionMessages.INVALID_DESTINATION);
         }
+    }
+
+    public static void printFilteredStudents(String course, String filter, Integer numberOfStudents) {
+        if (!isQueryForCoursePossible(course)) {
+            return;
+        }
+
+        if (numberOfStudents == null) {
+            numberOfStudents = studentsByCourse.get(course).size();
+        }
+
+        RepositoryFilters.printFilteredStudents(studentsByCourse.get(course), filter, numberOfStudents);
+    }
+
+    public static void printOrderedStudents(String course, String filter, Integer numberOfStudents) {
+        if (!isQueryForCoursePossible(course)) {
+            return;
+        }
+
+        if (numberOfStudents == null) {
+            numberOfStudents = studentsByCourse.get(course).size();
+        }
+
+        RepositoryFilters.printFilteredStudents(studentsByCourse.get(course), filter, numberOfStudents);
     }
 }
