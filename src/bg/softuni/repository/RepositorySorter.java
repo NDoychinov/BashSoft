@@ -6,21 +6,22 @@ import bg.softuni.staticData.ExceptionMessages;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class RepositorySorters {
-    public static void printSortedStudents(
-            HashMap<String, ArrayList<Integer>> courseData,
+public class RepositorySorter {
+
+    public void printSortedStudents(
+            HashMap<String, Double> courseData,
             String comparisonType,
             int numberOfStudents) {
         comparisonType = comparisonType.toLowerCase();
 
         if (!comparisonType.equals("ascending") && !comparisonType.equals("descending")) {
-            OutputWriter.displayException(ExceptionMessages.INVALID_COMPARISON_QUERY);
-            return;
+            throw new IllegalArgumentException(
+                    ExceptionMessages.INVALID_COMPARISON_QUERY);
         }
 
-        Comparator<Map.Entry<String, ArrayList<Integer>>> comparator = (x, y) -> {
-            double value1 = x.getValue().stream().mapToInt(Integer::valueOf).average().getAsDouble();
-            double value2 = y.getValue().stream().mapToInt(Integer::valueOf).average().getAsDouble();
+        Comparator<Map.Entry<String, Double>> comparator = (x, y) -> {
+            double value1 = x.getValue();
+            double value2 = y.getValue();
             return Double.compare(value1, value2);
         };
 
@@ -35,13 +36,15 @@ public class RepositorySorters {
             Collections.reverse(sortedStudents);
         }
 
-
-        printStudents(courseData, sortedStudents);
+        this.printStudents(courseData, sortedStudents);
     }
 
-    private static void printStudents(HashMap<String, ArrayList<Integer>> courseData, List<String> sortedStudents) {
+    private void printStudents(
+            HashMap<String, Double> courseData,
+            List<String> sortedStudents) {
         for (String student : sortedStudents) {
-            OutputWriter.printStudent(student, courseData.get(student));
+            OutputWriter.writeMessageOnNewLine(String.format(
+                    "%s - %f", student, courseData.get(student)));
         }
     }
 }

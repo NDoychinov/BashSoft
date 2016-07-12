@@ -1,80 +1,63 @@
 package bg.softuni.judge;
 
+import bg.softuni.exceptions.InvalidPathException;
 import bg.softuni.io.OutputWriter;
 import bg.softuni.staticData.ExceptionMessages;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Tester {
 
-    public static void compareContent(String actualOutput, String expectedOutput) {
+    public void compareContent(
+            String actualOutput,
+            String expectedOutput) throws IOException {
         try {
-
             OutputWriter.writeMessageOnNewLine("Reading files...");
             String mismatchPath = getMismatchPath(expectedOutput);
-
             List<String> actualOutputString = readTextFile(actualOutput);
             List<String> expectedOutputString = readTextFile(expectedOutput);
-
-            boolean mismatch = compareStrings(actualOutputString, expectedOutputString, mismatchPath);
+            boolean mismatch = compareStrings(
+                    actualOutputString, expectedOutputString, mismatchPath);
 
             if (mismatch) {
                 List<String> mismatchString = readTextFile(mismatchPath);
                 mismatchString.forEach(OutputWriter::writeMessageOnNewLine);
             } else {
-                OutputWriter.writeMessageOnNewLine("Files are identical. There are no mismatches.");
+                OutputWriter.writeMessageOnNewLine(
+                        "Files are identical. There are no mismatches.");
             }
         } catch (IOException ioe) {
-            OutputWriter.displayException(ExceptionMessages.INVALID_PATH);
+            throw new InvalidPathException();
         }
     }
 
-    private static List<String> readTextFile(String filePath) throws IOException {
+    private List<String> readTextFile(String filePath) throws IOException {
         List<String> text = new ArrayList<>();
-
         File file = new File(filePath);
-
         FileReader fileReader = new FileReader(file);
         BufferedReader reader = new BufferedReader(fileReader);
-
         String line = reader.readLine();
 
         while (line != null) {
             text.add(line);
             line = reader.readLine();
         }
-
         reader.close();
-
         return text;
     }
 
-    private static String getMismatchPath(String expectedOutput) {
+    private String getMismatchPath(String expectedOutput) {
         int index = expectedOutput.lastIndexOf('\\');
         String directoryPath = expectedOutput.substring(0, index);
         return directoryPath + "\\mismatch.txt";
     }
 
-    private static void printOutput(String mismatchPath, boolean isMismatch) throws IOException {
-        if (isMismatch)
-        {
-            List<String> mismatchStrings = Files.readAllLines(Paths.get(mismatchPath));
-            mismatchStrings.forEach(OutputWriter::writeMessageOnNewLine);
-            return;
-        }
-
-        OutputWriter.writeMessageOnNewLine("Files are identical. There are no mismatches.");
-    }
-
-    private static boolean compareStrings(
+    private boolean compareStrings(
             List<String> actualOutputString,
             List<String> expectedOutputString,
-            String mismatchPath)
-    {
+            String mismatchPath) {
         OutputWriter.writeMessageOnNewLine("Comparing files...");
         String output = "";
         boolean isMismatch = false;
@@ -82,7 +65,6 @@ public class Tester {
         try {
             FileWriter fileWriter = new FileWriter(mismatchPath);
             BufferedWriter writer = new BufferedWriter(fileWriter);
-
             int maxLength = Math.max(actualOutputString.size(), expectedOutputString.size());
 
             for (int i = 0; i < maxLength; i++) {
@@ -98,7 +80,6 @@ public class Tester {
 
                 writer.write(output);
             }
-
             writer.close();
         } catch (IOException ioe) {
             isMismatch = true;
@@ -107,7 +88,6 @@ public class Tester {
             isMismatch = true;
             OutputWriter.displayException(ExceptionMessages.INVALID_OUTPUT_LENGTH);
         }
-
         return isMismatch;
     }
 }

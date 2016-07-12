@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee52f6cf-b549-4470-92ea-458b70eda3c9" name="Default" comment="BashSoft Update">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bg/softuni/Models/Course.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bg/softuni/Models/Student.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/repository/RepositoryFilters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/repository/RepositorySorters.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilters.java" afterPath="$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorters.java" afterPath="$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/Main.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/io/CommandInterpreter.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/io/CommandInterpreter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/io/IOManager.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/io/IOManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/io/InputReader.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/io/InputReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/judge/Tester.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/judge/Tester.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/network/DownloadManager.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/network/DownloadManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/repository/StudentsRepository.class" afterPath="$PROJECT_DIR$/out/production/BashSoft/bg/softuni/repository/StudentsRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/Main.java" afterPath="$PROJECT_DIR$/src/bg/softuni/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/io/CommandInterpreter.java" afterPath="$PROJECT_DIR$/src/bg/softuni/io/CommandInterpreter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/io/IOManager.java" afterPath="$PROJECT_DIR$/src/bg/softuni/io/IOManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/io/InputReader.java" afterPath="$PROJECT_DIR$/src/bg/softuni/io/InputReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/io/OutputWriter.java" afterPath="$PROJECT_DIR$/src/bg/softuni/io/OutputWriter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/judge/Tester.java" afterPath="$PROJECT_DIR$/src/bg/softuni/judge/Tester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/network/DownloadManager.java" afterPath="$PROJECT_DIR$/src/bg/softuni/network/DownloadManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java" afterPath="$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bg/softuni/staticData/ExceptionMessages.java" afterPath="$PROJECT_DIR$/src/bg/softuni/staticData/ExceptionMessages.java" />
     </list>
     <ignored path="BashSoft.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,16 +53,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="InputReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/InputReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CommandInterpreter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/CommandInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,8 +66,18 @@
       <file leaf-file-name="DownloadManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bg/softuni/network/DownloadManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="1450">
+              <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/judge/Tester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2125">
+              <caret line="92" column="67" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -63,8 +86,77 @@
       <file leaf-file-name="StudentsRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="176">
+              <caret line="142" column="53" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/Models/Course.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/Models/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1425">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionMessages.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/staticData/ExceptionMessages.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/OutputWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#268#269#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoryFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositorySorter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -90,8 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/studets.txt" />
-        <option value="$PROJECT_DIR$/src/Data.java" />
         <option value="$PROJECT_DIR$/src/StudentsRepository.java" />
         <option value="$PROJECT_DIR$/src/InputReader.java" />
         <option value="$PROJECT_DIR$/src/OutputWriter.java" />
@@ -128,9 +218,21 @@
         <option value="$PROJECT_DIR$/src/com/softuni/staticData/ExceptionMessages.java" />
         <option value="$PROJECT_DIR$/src/com/softuni/io/CommandInterpreter.java" />
         <option value="$PROJECT_DIR$/src/com/softuni/repository/StudentsRepository.java" />
-        <option value="$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java" />
-        <option value="$PROJECT_DIR$/src/bg/softuni/io/CommandInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/network/DownloadManager.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/judge/Tester.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/io/IOManager.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilters.java" />
         <option value="$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorters.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/io/InputReader.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/io/CommandInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/Main.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/staticData/ExceptionMessages.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/Models/Student.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilter.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/io/OutputWriter.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorter.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/Models/Course.java" />
+        <option value="$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java" />
       </list>
     </option>
   </component>
@@ -139,6 +241,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -153,7 +262,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -171,7 +280,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -226,6 +335,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="staticData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BashSoft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BashSoft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="softuni" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -248,29 +379,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BashSoft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BashSoft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="softuni" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="judge" />
+              <option name="myItemId" value="Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,8 +421,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -785,7 +894,12 @@
       <workItem from="1465546607052" duration="1569000" />
       <workItem from="1465822502873" duration="1160000" />
       <workItem from="1466691427178" duration="197000" />
-      <workItem from="1466691846851" duration="60000" />
+      <workItem from="1466691846851" duration="205000" />
+      <workItem from="1466692127393" duration="67000" />
+      <workItem from="1467123457581" duration="1248000" />
+      <workItem from="1467624596052" duration="9141000" />
+      <workItem from="1467640303827" duration="372000" />
+      <workItem from="1467643993182" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="BashSoft Update">
       <created>1466691610225</created>
@@ -798,11 +912,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29901000" />
+    <option name="totallyTimeSpent" value="41575000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -814,7 +928,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19515885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19515885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -825,11 +939,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="-8" y="-18" width="1319" height="780" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.58919805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="350" y="188" width="742" height="399" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.8445172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="266" y="83" width="806" height="555" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -889,8 +1003,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java" />
     <entry file="file://$PROJECT_DIR$/BashSoft/studets.txt" />
     <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/IOManager.java" />
     <entry file="file://$PROJECT_DIR$/src/bg/softuni/Main.java" />
@@ -918,9 +1030,7 @@
     <entry file="uml://JAVA/IO.CommandInterpreter" />
     <entry file="file://$PROJECT_DIR$/LARGE_elevation.jpg" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/io/File.java" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/judge/Tester.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/String.java" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/IOManager.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/io/Reader.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/io/BufferedReader.java" />
     <entry file="file://$PROJECT_DIR$/res/software-university-logo.png" />
@@ -928,10 +1038,6 @@
     <entry file="file://$PROJECT_DIR$/res/data.txt" />
     <entry file="file://$PROJECT_DIR$/src/bg/softuni/staticData/SessionData.java" />
     <entry file="file://$PROJECT_DIR$/res/data.txt" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/OutputWriter.java" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/staticData/ExceptionMessages.java" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilters.java" />
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorters.java" />
     <entry file="file://$PROJECT_DIR$/out/production/BashSoft/Data.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-750">
@@ -946,7 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/Main.java" />
     <entry file="file://$PROJECT_DIR$/BashSoft.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -954,10 +1059,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/IOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/InputReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="200">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/network/DownloadManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1450">
+          <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -970,18 +1089,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bg/softuni/network/DownloadManager.java">
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="358">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/judge/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="92" column="67" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/Models/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/staticData/ExceptionMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/io/OutputWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/RepositoryFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/RepositorySorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bg/softuni/Models/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bg/softuni/repository/StudentsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="176">
+          <caret line="142" column="53" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
           <folding />
         </state>
       </provider>
