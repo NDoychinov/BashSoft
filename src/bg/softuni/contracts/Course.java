@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Created by Niki on 13.7.2016 г..
  */
-public interface Course {
+public interface Course extends Comparable<Course> {
 
     String getName();
 

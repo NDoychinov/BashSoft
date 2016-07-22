@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Created by Niki on 13.7.2016 г..
  */
-public interface Student {
+public interface Student extends Comparable<Student> {
 
     String getMarkForCourse(String courseName);
 
