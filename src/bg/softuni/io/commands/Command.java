@@ -1,25 +1,22 @@
 package bg.softuni.io.commands;
 
+import bg.softuni.contracts.*;
 import bg.softuni.exceptions.InvalidInputException;
-import bg.softuni.io.IOManager;
-import bg.softuni.judge.Tester;
-import bg.softuni.network.DownloadManager;
-import bg.softuni.repository.StudentsRepository;
 
-public abstract class Command {
+public abstract class Command implements Executable {
     private String input;
     private String[] data;
-    private StudentsRepository repository;
-    private Tester tester;
-    private IOManager ioManager;
-    private DownloadManager downloadManager;
+    private Database repository;
+    private ContentComparer tester;
+    private DirectoryManager ioManager;
+    private AsynchDownloader downloadManager;
 
     protected Command(String input,
                       String[] data,
-                      Tester tester,
-                      StudentsRepository repository,
-                      DownloadManager downloadManager,
-                      IOManager ioManager) {
+                      ContentComparer tester,
+                      Database repository,
+                      AsynchDownloader downloadManager,
+                      DirectoryManager ioManager) {
         this.setInput(input);
         this.setData(data);
         this.tester = tester;
@@ -28,19 +25,19 @@ public abstract class Command {
         this.ioManager = ioManager;
     }
 
-    protected StudentsRepository getRepository() {
+    protected Database getRepository() {
         return repository;
     }
 
-    protected Tester getTester() {
+    protected ContentComparer getTester() {
         return tester;
     }
 
-    protected IOManager getIoManager() {
+    protected DirectoryManager getIoManager() {
         return ioManager;
     }
 
-    protected DownloadManager getDownloadManager() {
+    protected AsynchDownloader getDownloadManager() {
         return downloadManager;
     }
 
